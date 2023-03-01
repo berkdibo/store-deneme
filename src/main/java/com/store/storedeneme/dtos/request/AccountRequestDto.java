@@ -2,31 +2,28 @@ package com.store.storedeneme.dtos.request;
 
 import com.store.storedeneme.model.enums.City;
 import com.store.storedeneme.model.enums.Currency;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Getter
-@Setter
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class AccountRequestDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
-    private Long customerId;
 
-    private Double balance;
+    public Long id;
 
-    @Enumerated
-    private City city;
+    public Long customerId;
 
-    @Enumerated
-    private Currency currency;
+    public Double balance;
+
+    @Enumerated(EnumType.STRING)
+    public City city;
+
+    @Enumerated(EnumType.STRING)
+    public Currency currency;
+
 
 }

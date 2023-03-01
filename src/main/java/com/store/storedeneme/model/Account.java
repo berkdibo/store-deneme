@@ -9,21 +9,16 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Entity
-@EqualsAndHashCode
-
-
+@Builder
+@AllArgsConstructor
     public class Account implements Serializable {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
-
         private Long customerId;
-
 
         private Double balance;
 

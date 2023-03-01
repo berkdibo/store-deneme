@@ -2,15 +2,19 @@ package com.store.storedeneme.dtos.response;
 
 import com.store.storedeneme.model.enums.City;
 import com.store.storedeneme.model.enums.Currency;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class AccountResponseDto {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
     private Long customerId;
